@@ -1,0 +1,452 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	font-size: 10px;
+	padding: 0;
+	margin: 0;
+	word-break: keep-all;
+}
+html,
+body {
+	height: 100%;
+}
+
+#root {
+	height: 100%;
+}
+
+/* story of ocean start */
+
+.story-of-ocean {
+	height: 100%;
+	background-color: #fff;
+	position: relative;
+}
+
+.story-of-ocean > .title-box {
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.story-of-ocean > .title-box > p {
+	color: #000;
+	font-size: 4rem;
+}
+
+.story-of-ocean-section {
+	height: inherit;
+}
+
+.story-of-ocean-contents-grid-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transform: translateY(50px);
+}
+
+.story-of-ocean-card-list-wrapper {
+	display: grid;
+	row-gap: 2.5rem;
+	padding: 0 6rem;
+}
+
+.story-of-ocean-card {
+	overflow: hidden;
+	display: block;
+	position: relative;
+	border-radius: 15px;
+	box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+	font-size: 0;
+	margin: 0 1.25rem;
+}
+
+.story-of-ocean-card-image {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.story-of-ocean-card-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 3rem 2rem 3rem;
+}
+
+.story-of-ocean-card-title {
+	font-weight: 800;
+	font-size: 2.25rem;
+	line-height: 1.675rem;
+}
+
+.story-of-ocean-card-text {
+	font-weight: 800;
+	margin-top: 2rem;
+	font-size: 1.5rem;
+}
+
+.story-of-ocean-content-source {
+	margin-left: auto;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-top: 1rem;
+}
+
+.story-of-ocean-card-image-wrapper {
+	position: relative;
+}
+
+.video-responsive {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
+
+.video-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border-width: 0;
+}
+
+/* story of ocean end */
+
+/* values start */
+.values {
+	position: relative;
+	background-color: #fff;
+	width: 100%;
+}
+
+.section-slide-wrap {
+	background-color: black;
+	overflow-x: hidden;
+}
+
+.values-title-box {
+	width: fit-content;
+	height: fit-content;
+}
+
+.values-title-box.fixed {
+	position: fixed;
+	top: 2rem;
+}
+
+.values-title-box.sticky {
+	position: sticky;
+	top: 2rem;
+}
+
+.values-title-box > .title {
+	font-weight: 800;
+	font-size: 5rem;
+	color: #fff;
+}
+
+.swiper-wrapper {
+	position: relative;
+	/* display: flex; */
+	display: grid;
+	height: 3000px;
+	padding: 0 3rem;
+	width: 100%;
+}
+
+.swiper-slide {
+	margin-right: 5rem;
+	color: var(--fff);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.values-content-wrapper {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	width: 100%;
+}
+
+.static-area > img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.sticky-area {
+	position: sticky;
+	background-color: red;
+}
+
+.fixed-area {
+	position: fixed;
+	top: 0;
+	left: 40%;
+	background-color: blue;
+}
+
+.content {
+	display: flex;
+	font-weight: 700;
+	font-size: 5rem;
+	align-items: center;
+	justify-content: center;
+	width: 100rem;
+	height: 80%;
+	background-color: var(--white);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.description {
+	height: 15%;
+	background-color: var(--white);
+	border-radius: 8px;
+	padding: 0.5rem 1.25rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.description > p {
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+/* values end */
+
+li {
+	list-style: none;
+}
+
+.coexistence-with-ocean {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 3rem;
+	background-color: #aaccd2;
+	color: #fff;
+}
+
+.sea-env {
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 3rem;
+}
+
+.progress {
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 50px;
+}
+
+.title-box {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 40px;
+	top: 40px;
+}
+
+.title-box > p {
+	color: #fff;
+	line-height: 1.1;
+	font-weight: 800;
+}
+
+.title-box > p {
+	margin-right: 1rem;
+}
+
+.title-box > .title {
+	font-size: 6.25rem;
+}
+
+.title-box > .subtitle {
+	font-size: 3.75rem;
+}
+
+.marine-sustain {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 3rem;
+	background-color: #aaccd2;
+	color: #fff;
+}
+
+.list-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.epilogue {
+	height: 100%;
+	font-weight: 600;
+	font-size: 3rem;
+	color: #000;
+	padding-bottom: 5rem;
+	position: relative;
+}
+
+.epilogue-title-box {
+	padding: 4rem 6.25rem;
+	position: absolute;
+}
+
+.epilogue-title-box > div {
+	display: flex;
+	align-items: center;
+}
+
+.epilogue-title-box > div > .title {
+	font-weight: 700;
+	font-size: 5rem;
+	line-height: 1.21;
+	letter-spacing: 2px;
+	margin-right: 5rem;
+}
+
+.epilogue-title-box > div > .subtitle {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 1.67;
+}
+
+.epilogue-contents-grid-wrapper {
+	padding: 0 10rem 5rem 10rem;
+	padding-top: 15rem;
+}
+
+.epilogue-card-list-wrapper {
+	display: grid;
+	row-gap: 2.5rem;
+}
+
+.epilogue-card-link {
+	overflow: hidden;
+	display: block;
+	position: relative;
+	border-radius: 15px;
+	box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+	font-size: 0;
+	margin: 0 1.25rem;
+}
+
+.epilogue-card {
+	/* height: fit-content; */
+}
+
+.epilogue-card-image {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.epilogue-card-footer {
+	background-color: #fff;
+	text-align: center;
+	padding: 3rem 2rem;
+	height: fit-content;
+	min-height: 70px;
+}
+
+.epilogue-card-title {
+	font-weight: 800;
+	font-size: 2.25rem;
+	line-height: 1.675rem;
+}
+
+.epilogue-card-text {
+	font-weight: 800;
+	margin-top: 1rem;
+	font-size: 1.75rem;
+	margin-top: 1.5rem;
+}
+
+.epilogue-card-image-wrapper {
+	position: relative;
+}
+
+.video::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url(/images/icon-play.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: '';
+	width: 58px;
+	height: 68px;
+}
+
+.epilogue-title-box-sticky {
+	width: 100%;
+	padding: 2rem 6.25rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	backdrop-filter: saturate(180%) blur(20px);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+	transition: background-color 0.3s, opacity 0.4s;
+}
+
+.epilogue-title-box-sticky > div {
+	display: flex;
+	align-items: center;
+}
+
+.epilogue-title-box-sticky > div > .title {
+	font-weight: 800;
+	font-size: 3rem;
+	margin-right: 1.5rem;
+	color: #016360;
+}
+
+.epilogue-title-box-sticky > div > .subtitle {
+	font-weight: 800;
+	font-size: 2.5rem;
+	color: #2eaba1;
+}
+
+@media all and (max-width: 1440px) {
+	.story-of-ocean-card-list-wrapper,
+	.epilogue-card-list-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+	}
+}
+
+@media all and (min-width: 1441px) {
+	.story-of-ocean-card-list-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+	}
+	.epilogue-card-list-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(33%, auto));
+	}
+}
+
+@media all and (max-width: 1000px) {
+	.story-of-ocean-card-list-wrapper,
+	.epilogue-card-list-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(100%, auto));
+	}
+}
