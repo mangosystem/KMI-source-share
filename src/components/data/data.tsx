@@ -1,3 +1,38 @@
+interface section {
+	id: string; // element id - 스크롤 이벤트 또는 목차, 네비게이션 클릭으로 인한 시점 이동 시(이하 이동 이벤트라 칭함) 사용
+	title: string; // 목차 - 제목
+	block: string; // 이동 이벤트 위치
+	page: number; // context - currentPage
+	icon?: string; // 목차 - 아이콘
+	items?: sectionItem[]; // section은 items:sectionItem[]을 가짐
+	activeContentName?: string; // 이동 이벤트 시, ScrollPage.tsx의 우측 컨텐츠가 다르게 보여져야하는 것을 컨트롤(context - activeContent)
+}
+
+interface sectionItem {
+	id: string; // section과 동일
+	title: string; // 목차 - 하위컨텐츠 제목
+	category?: string; // 유튜브 컨텐츠처럼 카테고리를 부여한 경우 사용
+	block?: string; // section과 동일
+	description?: string | string[]; // 설명글, content와 유사한 의미로 사용
+	source?: string; // 유튜브 출처(단일)
+	sources?: string[]; // 설명글 출처(단일 / 복수)
+	link?: string; // 유튜브 링크
+	youtube_code?: string; // 유튜브 embed code
+	page?: number; // section과 동일
+	activeContentName?: string; // section과 동일
+	content?: string[]; // 컨텐츠 내용글, 설명글과 유사한 의미로 사용
+	color?: string; // 텍스트에 색상이 들어가야하는 부분에서 사용
+	mapTitle?: string | string[]; // 지도가 사용되는 경우, 지도 제목
+	graphTitle?: string | string[]; // 인포그래픽 또는 차트가 사용되는 경우, 제목
+	image?: string | string[]; // 이미지가 삽입되는 경우, image src
+	tableData?: {
+		// 테이블이 그려지는 경우, data structure
+		head: any[];
+		body: any[];
+	};
+	mapId?: string | string[];
+}
+
 const BLOCK_START_LIST: string[] = [
 	'ocean-story',
 	'ocean-resources',
@@ -18,7 +53,7 @@ const NOT_NAV_LIST: string[] = [
 	'policy',
 ];
 
-const sections: any = [
+const sections: section[] = [
 	{
 		id: 'ocean-index',
 		title: '해양과의 공존',
@@ -237,7 +272,7 @@ const sections: any = [
 				page: 3,
 				activeContentName: 'ocean-sustain-sustainability-venn',
 				content: [
-					'바다는 우리 생활에 매우 중요한 공간입니다. 물고기와 해산물을 제공하고, 배들이 다니는 길이 되며, 우리가 휴식을 취하는 공간이 되는 등 다양한 혜택을 주고 있습니다. 해양 지속가능성”은 해양자원을 현재의 필요를 충족하면서도 미래 세대를 위해 해양생태계의 건강성과 생산성을 훼손하지 않고 사용하고 관리하는 것을 의미합니다.',
+					'바다는 우리 생활에 매우 중요한 공간입니다. 물고기와 해산물을 제공하고, 배들이 다니는 길이 되며, 우리가 휴식을 취하는 공간이 되는 등 다양한 혜택을 주고 있습니다. "해양 지속가능성"은 해양자원을 현재의 필요를 충족하면서도 미래 세대를 위해 해양생태계의 건강성과 생산성을 훼손하지 않고 사용하고 관리하는 것을 의미합니다.',
 					'우리는 바다를 이용할 때 항상 장기적인 관점에서 생각해야 합니다. 해양쓰레기를 줄이고, 바다 생물들의 서식지를 보호하며, 해양자원을 적절하게 이용하는 것이 중요합니다. 이렇게 할 때 우리 세대뿐만 아니라 미래 세대들도 계속해서 바다의 혜택을 누릴 수 있을 것입니다. 해양의 지속가능성을 시스템적으로 이해하기 위해 환경, 경제, 사회 측면을 통합적으로 고려하여야 합니다.',
 				],
 				color: '#987CE4',
