@@ -13,7 +13,7 @@
   - Geoserver: http://175.125.95.209:8888/geoserver/
 
 
-## 구동환경
+## 구동환경(only front-end)
   - node v18 or later
 
 
