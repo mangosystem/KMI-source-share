@@ -36,7 +36,6 @@ const ScrollPage = forwardRef<ScrollPageRef>((props, ref) => {
 	const [economyMap, setEconomyMap] = useState<Map | null>(null);
 
 	const [koreaMap, setKoreaMap] = useState<Map | null>(null);
-	const [busanMap, setBusanMap] = useState<Map | null>(null);
 
 	const [marinedebrisMap, setMarinedebrisMap] = useState<Map | null>(null);
 	const [finedustMap, setFinedustMap] = useState<Map | null>(null);
@@ -562,51 +561,6 @@ const ScrollPage = forwardRef<ScrollPageRef>((props, ref) => {
 			});
 
 			setKoreaMap(_koreaMap);
-		}
-
-		const busanMapView = new View({
-			center: olProj.transform([129.08, 35.2], 'EPSG:4326', 'EPSG:3857'),
-			projection: 'EPSG:3857',
-			zoom: 10.8,
-			enableRotation: false,
-		});
-
-		if (!busanMap) {
-			const busanLayer = new ImageLayer({
-				source: new ImageWMS({
-					url: GISSERVER_URL,
-					params: {
-						VERSION: '1.3.0',
-						FORMAT: 'image/png',
-						TRANSPARENT: 'true',
-						tiled: 'true',
-						STYLES: 'sm_busan_hotel',
-						LAYERS: 'ocean:sm_busan_hotel',
-					},
-				}),
-			});
-
-			const _busanMap = new Map({
-				target: 'busan-hotel-map',
-				view: busanMapView,
-				layers: [
-					new LayerGroup({
-						layers: [
-							new TileLayer({
-								source: new XYZ({
-									url: 'https://xdworld.vworld.kr/2d/Base/service/{z}/{x}/{y}.png',
-									attributions: '공간정보오픈플랫폼 VWORLD 2019 | 국토교통부',
-								}),
-							}),
-						],
-					}),
-					new LayerGroup({
-						layers: [busanLayer],
-					}),
-				],
-			});
-
-			setBusanMap(_busanMap);
 		}
 	}, []);
 
