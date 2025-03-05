@@ -21,7 +21,7 @@
 
 1. 프로젝트 클론
 1. `npm install`
-1. `npm start`
+1. `npm run dev`
 
 ## 배포 방법
 
